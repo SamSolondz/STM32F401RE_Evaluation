@@ -79,7 +79,8 @@ int main(void){
 
   time_t start = clock();
 
-  while((start = clock()) < 200){
+ while(start < 200){
+ 	  start = clock();
       temp = wave.read()*100.0f;
       if(temp > max)
       {
@@ -104,8 +105,6 @@ int main(void){
    }
 
    printf("\r\nADC Input Frequency: %d Hz\r\n", pulse_count);
-   time_temp = clock();
-
    printf("\r\nPart-3 : Blinking LED @ (1/ %d Hz) proportional to ADC Input frequency %d Hz ...\r\n", pulse_count, pulse_count);
    printf("\r\n\r\n****************************** Demo over! ******************************\r\n\r\n");
    printf("\r\n");
