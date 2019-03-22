@@ -1,0 +1,215 @@
+\section{D\+:/\+C\+U\+\_\+\+Boulder/4th\+\_\+sem\+\_\+courses/\+M\+E\+S\+A/\+Project/\+Project-\/2/\+Files/\+Module\+\_\+4/mbed/main.cpp File Reference}
+\label{main_8cpp}\index{D:/CU\_Boulder/4th\_sem\_courses/MESA/Project/Project-\/2/Files/Module\_4/mbed/main.cpp@{D:/CU\_Boulder/4th\_sem\_courses/MESA/Project/Project-\/2/Files/Module\_4/mbed/main.cpp}}
+{\ttfamily \#include \char`\"{}mbed.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ S\+W\+\_\+\+D\+A\+C\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}~1004
+\item 
+\#define \textbf{ S\+W\+\_\+\+D\+A\+C\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+F\+L\+O\+AT}~1004.\+0f
+\item 
+\#define \textbf{ N\+\_\+\+S\+A\+M\+P\+L\+ES}~(\textbf{ S\+W\+\_\+\+D\+A\+C\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY} + 50)
+\item 
+\#define \textbf{ S\+W\+\_\+\+D\+A\+C\+\_\+\+T\+I\+M\+E\+\_\+\+P\+E\+R\+I\+OD}~((float)(1.\+0f/\+S\+W\+\_\+\+D\+A\+C\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y))
+\item 
+\#define \textbf{ S\+W\+\_\+\+D\+A\+C\+\_\+\+T\+I\+M\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+I\+NT}~(1000000/\textbf{ S\+W\+\_\+\+D\+A\+C\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY})
+\item 
+\#define \textbf{ M\+A\+X\+\_\+\+V\+O\+L\+T\+A\+GE}~3
+\item 
+\#define \textbf{ S\+A\+M\+P\+L\+E\+\_\+\+S\+T\+EP}~((float)(3.\+0f$\ast$\+S\+W\+\_\+\+D\+A\+C\+\_\+\+T\+I\+M\+E\+\_\+\+P\+E\+R\+I\+O\+D))
+\item 
+\#define \textbf{ C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+NT}~2
+\item 
+\#define \textbf{ P\+R\+I\+N\+T\+\_\+\+D\+A\+C\+\_\+\+B\+U\+F\+F\+ER}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Analog\+In \textbf{ wave} (P\+A\+\_\+0)
+\item 
+Digital\+Out \textbf{ led\+\_\+1} (L\+E\+D1)
+\item 
+Digital\+Out \textbf{ dout\+\_\+1} (D7)
+\item 
+void \textbf{ generate\+\_\+tone} (float $\ast$\textbf{ samples}, uint16\+\_\+t $\ast$\textbf{ time\+\_\+stamp}, uint16\+\_\+t samples\+\_\+per\+\_\+period, uint16\+\_\+t cycle\+\_\+count)
+\item 
+void \textbf{ print\+\_\+buffers} (float $\ast$\textbf{ samples}, uint16\+\_\+t $\ast$\textbf{ time\+\_\+stamp}, uint16\+\_\+t samples\+\_\+per\+\_\+period, uint16\+\_\+t cycle\+\_\+count)
+\item 
+int \textbf{ main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \textbf{ samples} [\textbf{ S\+W\+\_\+\+D\+A\+C\+\_\+\+T\+I\+M\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+I\+NT} $\ast$\textbf{ C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+NT}]
+\item 
+uint16\+\_\+t \textbf{ time\+\_\+stamp} [\textbf{ S\+W\+\_\+\+D\+A\+C\+\_\+\+T\+I\+M\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+I\+NT} $\ast$\textbf{ C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+NT}]
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\label{main_8cpp_a0e115f49dba66626f975b86a6b14c0d4}} 
+\index{main.cpp@{main.cpp}!CYCLE\_COUNT@{CYCLE\_COUNT}}
+\index{CYCLE\_COUNT@{CYCLE\_COUNT}!main.cpp@{main.cpp}}
+\subsubsection{CYCLE\_COUNT}
+{\footnotesize\ttfamily \#define C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+NT~2}
+
+
+
+Definition at line 29 of file main.\+cpp.
+
+\mbox{\label{main_8cpp_a0637861f9419cef73e2e7e6210280e4e}} 
+\index{main.cpp@{main.cpp}!MAX\_VOLTAGE@{MAX\_VOLTAGE}}
+\index{MAX\_VOLTAGE@{MAX\_VOLTAGE}!main.cpp@{main.cpp}}
+\subsubsection{MAX\_VOLTAGE}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+V\+O\+L\+T\+A\+GE~3}
+
+
+
+Definition at line 27 of file main.\+cpp.
+
+\mbox{\label{main_8cpp_a864e696e58717460cdb19e5ce8f7ce20}} 
+\index{main.cpp@{main.cpp}!N\_SAMPLES@{N\_SAMPLES}}
+\index{N\_SAMPLES@{N\_SAMPLES}!main.cpp@{main.cpp}}
+\subsubsection{N\_SAMPLES}
+{\footnotesize\ttfamily \#define N\+\_\+\+S\+A\+M\+P\+L\+ES~(\textbf{ S\+W\+\_\+\+D\+A\+C\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY} + 50)}
+
+
+
+Definition at line 24 of file main.\+cpp.
+
+\mbox{\label{main_8cpp_aa02210b97c039dd968cbd23d508b7ea3}} 
+\index{main.cpp@{main.cpp}!PRINT\_DAC\_BUFFER@{PRINT\_DAC\_BUFFER}}
+\index{PRINT\_DAC\_BUFFER@{PRINT\_DAC\_BUFFER}!main.cpp@{main.cpp}}
+\subsubsection{PRINT\_DAC\_BUFFER}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+T\+\_\+\+D\+A\+C\+\_\+\+B\+U\+F\+F\+ER}
+
+
+
+Definition at line 31 of file main.\+cpp.
+
+\mbox{\label{main_8cpp_ab0ad7e747377ae1ac9490e5300c324ea}} 
+\index{main.cpp@{main.cpp}!SAMPLE\_STEP@{SAMPLE\_STEP}}
+\index{SAMPLE\_STEP@{SAMPLE\_STEP}!main.cpp@{main.cpp}}
+\subsubsection{SAMPLE\_STEP}
+{\footnotesize\ttfamily \#define S\+A\+M\+P\+L\+E\+\_\+\+S\+T\+EP~((float)(3.\+0f$\ast$\+S\+W\+\_\+\+D\+A\+C\+\_\+\+T\+I\+M\+E\+\_\+\+P\+E\+R\+I\+O\+D))}
+
+
+
+Definition at line 28 of file main.\+cpp.
+
+\mbox{\label{main_8cpp_a413ef51b0789c0d1eb4b0cacae615b57}} 
+\index{main.cpp@{main.cpp}!SW\_DAC\_FREQUENCY@{SW\_DAC\_FREQUENCY}}
+\index{SW\_DAC\_FREQUENCY@{SW\_DAC\_FREQUENCY}!main.cpp@{main.cpp}}
+\subsubsection{SW\_DAC\_FREQUENCY}
+{\footnotesize\ttfamily \#define S\+W\+\_\+\+D\+A\+C\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY~1004}
+
+
+
+Definition at line 22 of file main.\+cpp.
+
+\mbox{\label{main_8cpp_a0f487607127587e8f3a96a24a4d7c050}} 
+\index{main.cpp@{main.cpp}!SW\_DAC\_FREQUENCY\_FLOAT@{SW\_DAC\_FREQUENCY\_FLOAT}}
+\index{SW\_DAC\_FREQUENCY\_FLOAT@{SW\_DAC\_FREQUENCY\_FLOAT}!main.cpp@{main.cpp}}
+\subsubsection{SW\_DAC\_FREQUENCY\_FLOAT}
+{\footnotesize\ttfamily \#define S\+W\+\_\+\+D\+A\+C\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+F\+L\+O\+AT~1004.\+0f}
+
+
+
+Definition at line 23 of file main.\+cpp.
+
+\mbox{\label{main_8cpp_a3a75cc1e5e42bda5ce55ca3a65d32349}} 
+\index{main.cpp@{main.cpp}!SW\_DAC\_TIME\_PERIOD@{SW\_DAC\_TIME\_PERIOD}}
+\index{SW\_DAC\_TIME\_PERIOD@{SW\_DAC\_TIME\_PERIOD}!main.cpp@{main.cpp}}
+\subsubsection{SW\_DAC\_TIME\_PERIOD}
+{\footnotesize\ttfamily \#define S\+W\+\_\+\+D\+A\+C\+\_\+\+T\+I\+M\+E\+\_\+\+P\+E\+R\+I\+OD~((float)(1.\+0f/\+S\+W\+\_\+\+D\+A\+C\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y))}
+
+
+
+Definition at line 25 of file main.\+cpp.
+
+\mbox{\label{main_8cpp_a679ff9a26484c3bb54b51e2bfe876a50}} 
+\index{main.cpp@{main.cpp}!SW\_DAC\_TIME\_PERIOD\_INT@{SW\_DAC\_TIME\_PERIOD\_INT}}
+\index{SW\_DAC\_TIME\_PERIOD\_INT@{SW\_DAC\_TIME\_PERIOD\_INT}!main.cpp@{main.cpp}}
+\subsubsection{SW\_DAC\_TIME\_PERIOD\_INT}
+{\footnotesize\ttfamily \#define S\+W\+\_\+\+D\+A\+C\+\_\+\+T\+I\+M\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+I\+NT~(1000000/\textbf{ S\+W\+\_\+\+D\+A\+C\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY})}
+
+
+
+Definition at line 26 of file main.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\label{main_8cpp_a283aa56f6d1126af650efc27cbcbc589}} 
+\index{main.cpp@{main.cpp}!dout\_1@{dout\_1}}
+\index{dout\_1@{dout\_1}!main.cpp@{main.cpp}}
+\subsubsection{dout\_1()}
+{\footnotesize\ttfamily Digital\+Out dout\+\_\+1 (\begin{DoxyParamCaption}\item[{D7}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{main_8cpp_aee802efc7a3ae6275ca8ac8fb06c702c}} 
+\index{main.cpp@{main.cpp}!generate\_tone@{generate\_tone}}
+\index{generate\_tone@{generate\_tone}!main.cpp@{main.cpp}}
+\subsubsection{generate\_tone()}
+{\footnotesize\ttfamily void generate\+\_\+tone (\begin{DoxyParamCaption}\item[{float $\ast$}]{samples,  }\item[{uint16\+\_\+t $\ast$}]{time\+\_\+stamp,  }\item[{uint16\+\_\+t}]{samples\+\_\+per\+\_\+period,  }\item[{uint16\+\_\+t}]{cycle\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file main.\+cpp.
+
+\mbox{\label{main_8cpp_a9aafede96ff802cd6dcaa7dcd6b92597}} 
+\index{main.cpp@{main.cpp}!led\_1@{led\_1}}
+\index{led\_1@{led\_1}!main.cpp@{main.cpp}}
+\subsubsection{led\_1()}
+{\footnotesize\ttfamily Digital\+Out led\+\_\+1 (\begin{DoxyParamCaption}\item[{L\+E\+D1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\subsubsection{main()}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file main.\+cpp.
+
+\mbox{\label{main_8cpp_a3f2309771391ea2eb70a7b2c0d3c72bb}} 
+\index{main.cpp@{main.cpp}!print\_buffers@{print\_buffers}}
+\index{print\_buffers@{print\_buffers}!main.cpp@{main.cpp}}
+\subsubsection{print\_buffers()}
+{\footnotesize\ttfamily void print\+\_\+buffers (\begin{DoxyParamCaption}\item[{float $\ast$}]{samples,  }\item[{uint16\+\_\+t $\ast$}]{time\+\_\+stamp,  }\item[{uint16\+\_\+t}]{samples\+\_\+per\+\_\+period,  }\item[{uint16\+\_\+t}]{cycle\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file main.\+cpp.
+
+\mbox{\label{main_8cpp_a296f426d06523200562e024bb052e097}} 
+\index{main.cpp@{main.cpp}!wave@{wave}}
+\index{wave@{wave}!main.cpp@{main.cpp}}
+\subsubsection{wave()}
+{\footnotesize\ttfamily Analog\+In wave (\begin{DoxyParamCaption}\item[{P\+A\+\_\+0}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\label{main_8cpp_a87cbf3c595589eb5828214202b51a2ba}} 
+\index{main.cpp@{main.cpp}!samples@{samples}}
+\index{samples@{samples}!main.cpp@{main.cpp}}
+\subsubsection{samples}
+{\footnotesize\ttfamily float samples[\textbf{ S\+W\+\_\+\+D\+A\+C\+\_\+\+T\+I\+M\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+I\+NT} $\ast$\textbf{ C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+NT}]}
+
+
+
+Definition at line 33 of file main.\+cpp.
+
+\mbox{\label{main_8cpp_a820dc6e7dfee5d8f43c195ebbca6198b}} 
+\index{main.cpp@{main.cpp}!time\_stamp@{time\_stamp}}
+\index{time\_stamp@{time\_stamp}!main.cpp@{main.cpp}}
+\subsubsection{time\_stamp}
+{\footnotesize\ttfamily uint16\+\_\+t time\+\_\+stamp[\textbf{ S\+W\+\_\+\+D\+A\+C\+\_\+\+T\+I\+M\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+I\+NT} $\ast$\textbf{ C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+NT}]}
+
+
+
+Definition at line 34 of file main.\+cpp.
+
